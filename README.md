@@ -19,7 +19,13 @@ About Deno serverless functions, get started by [vercel-deno](https://github.com
 1. Install [Vercel CLI](https://vercel.com/download)
 2. Clone this repository
 3. vercel login
-4. vercel dev
+4. Prepare api key for News API, [here](https://newsapi.org/)
+5. API_KEY=XXX vercel dev
+
+Try it. Execute the files in the `/api` directory:
+```shell
+$ curl -v http://localhost:3000/api/tabletop_games | jq
+```
 
 ## How to Create a Release
 If you have write access to this repository, you can read more about how to publish a release here.
