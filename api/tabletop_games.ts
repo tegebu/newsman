@@ -1,4 +1,4 @@
-import { ServerRequest } from 'https://deno.land/std@0.68.0/http/server.ts';
+import { ServerRequest } from 'https://deno.land/std@0.70.0/http/server.ts';
 import { format } from 'https://deno.land/x/date_fns@v2.15.0/index.js';
 
 export default async (req: ServerRequest) => {
