@@ -1,4 +1,5 @@
 # Newsman
+[![(Deno)](https://img.shields.io/badge/deno-^1.4.0-green.svg?style=flat-square&logo=deno)](https://deno.land)
 
 [<img src="./newsman-on-vercel-deno.png">](https://github.com/yoshixmk/newsman)
 

@@ -13,7 +13,21 @@ export default async (req: ServerRequest) => {
 	fetch(new Request(url))
 		.then(async (response: Response) => {
 			const res = await response.json() as Promise<Article>;
-			console.log(res);
+			// console.log(res);
+
+			(await res).articles = (await res).articles
+				.filter(
+					// policy
+					article => {
+						return article.url.startsWith('https://')
+					}
+				)
+				.map(article => {
+					// Avoiding "Mixed Content"
+					article.urlToImage = article.urlToImage?.replace('http://', 'https://') ?? null;
+					return article;
+				});
+			console.log(res)
 			req.respond({ body: JSON.stringify(res) });
 		})
 };
@@ -26,13 +40,13 @@ export interface Article {
 
 export interface ArticleElement {
 	source: Source;
-	author: null;
+	author: string | null;
 	title: string;
-	description: null;
+	description: string | null;
 	url: string;
-	urlToImage: null;
+	urlToImage: string | null;
 	publishedAt: string;
-	content: null;
+	content: string | null;
 }
 
 export interface Source {
