@@ -4,7 +4,7 @@ import { format } from "https://deno.land/x/date_fns@v2.15.0/index.js";
 const query =
   "(ボードゲーム OR テーブルゲーム OR カードゲーム OR アークライト) AND NOT (PS4 OR ニンテンドースイッチ OR ゲーム感覚 OR ゲームソフト OR ガンホー OR スマホアプリ OR RPG OR オンラインゲーム OR 2ちゃんねる OR パズドラ)";
 const excludeDomains =
-  "togetter.com,machicon.jp,livedoor.biz,livedoor.jp,livedoor.com,thebridge.jp,alfalfalfa.com,onecall2ch.com,matometanews.com,hatelabo.jp,new-akiba.com,prtimes.jp,scienceplus2ch.com,u-note.me,yaraon-blog.com,touchlab.jp,diamond.jp,www.2nn.jp,burusoku-vip.com";
+  "togetter.com,machicon.jp,livedoor.biz,livedoor.jp,livedoor.com,thebridge.jp,alfalfalfa.com,onecall2ch.com,matometanews.com,hatelabo.jp,new-akiba.com,prtimes.jp,scienceplus2ch.com,u-note.me,yaraon-blog.com,touchlab.jp,diamond.jp,www.2nn.jp,burusoku-vip.com,moeyo.com";
 
 export default async (req: ServerRequest) => {
   const d = new Date();
