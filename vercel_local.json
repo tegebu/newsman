@@ -8,7 +8,7 @@
       "headers": [
         {
           "key": "access-control-allow-origin",
-          "value": "https://www.tegebu.com"
+          "value": "*"
         }
       ]
     }
