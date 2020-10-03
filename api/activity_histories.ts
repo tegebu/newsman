@@ -1,5 +1,4 @@
-import { ServerRequest } from "https://deno.land/std@0.70.0/http/server.ts";
-import { format } from "https://deno.land/x/date_fns@v2.15.0/index.js";
+import { ServerRequest } from "https://deno.land/std@0.72.0/http/server.ts";
 
 export default async (req: ServerRequest) => {
   const d = new Date();
