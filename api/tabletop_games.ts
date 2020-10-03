@@ -1,4 +1,4 @@
-import { ServerRequest } from "https://deno.land/std@0.70.0/http/server.ts";
+import { ServerRequest } from "https://deno.land/std@0.72.0/http/server.ts";
 import { format } from "https://deno.land/x/date_fns@v2.15.0/index.js";
 
 const query =
@@ -10,13 +10,13 @@ export default async (req: ServerRequest) => {
   const d = new Date();
   d.setMonth(d.getMonth() - 1);
 
-	const url = `http://newsapi.org/v2/everything?from=${
+  const url = `http://newsapi.org/v2/everything?from=${
     format(d, "yyyy-MM-dd")
   }&q=${query}&sortBy=publishedAt&apiKey=${
     Deno.env.get("API_KEY")
-	}&excludeDomains=${excludeDomains}`;
+  }&excludeDomains=${excludeDomains}`;
 
-	fetch(new Request(url))
+  fetch(new Request(url))
     .then(async (response: Response) => {
       const res = await response.json() as Promise<Article>;
       // console.log(res);
