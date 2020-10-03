@@ -5,8 +5,6 @@
 
 Deliver interesting news for you.
 
-`TBD`: This project is currently in the planning stage.
-
 ## Usage
 
 **Newsman** is Serverless Functions for frontend teams, and it use ▲ Vercel Runtime for 🦕 Deno serverless functions
@@ -21,7 +19,7 @@ About Deno serverless functions, get started by [vercel-deno](https://github.com
 2. Clone this repository
 3. vercel login
 4. Prepare api key for News API, [here](https://newsapi.org/)
-5. API_KEY=XXX vercel dev --local-config=vercel_local.json
+5. API_KEY=XXX GAS_SCRIPT_ID=XXX vercel dev --local-config=vercel_local.json
 
 Try it. Execute the files in the `/api` directory:
 ```shell

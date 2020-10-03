@@ -10,13 +10,13 @@ export default async (req: ServerRequest) => {
   const d = new Date();
   d.setMonth(d.getMonth() - 1);
 
-	const url = `http://newsapi.org/v2/everything?from=${
+  const url = `http://newsapi.org/v2/everything?from=${
     format(d, "yyyy-MM-dd")
   }&q=${query}&sortBy=publishedAt&apiKey=${
     Deno.env.get("API_KEY")
-	}&excludeDomains=${excludeDomains}`;
+  }&excludeDomains=${excludeDomains}`;
 
-	fetch(new Request(url))
+  fetch(new Request(url))
     .then(async (response: Response) => {
       const res = await response.json() as Promise<Article>;
       // console.log(res);
