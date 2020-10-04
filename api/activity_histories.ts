@@ -1,4 +1,4 @@
-import { ServerRequest } from "https://deno.land/std@0.72.0/http/server.ts";
+import { ServerRequest } from "https://deno.land/std@0.73.0/http/server.ts";
 
 export default async (req: ServerRequest) => {
   const d = new Date();
