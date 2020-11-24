@@ -34,7 +34,7 @@ export default async (req: ServerRequest) => {
   d.setMonth(d.getMonth() - 1);
 
   const url = `http://newsapi.org/v2/everything?from=${
-    format(d, "yyyy-MM-dd")
+    format(d, "yyyy-MM-dd", {})
   }&q=${query}&sortBy=publishedAt&apiKey=${
     Deno.env.get("API_KEY")
   }&excludeDomains=${excludeDomains}`;
