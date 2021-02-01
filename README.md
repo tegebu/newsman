@@ -1,10 +1,9 @@
 # Newsman
+[![(Deno)](https://img.shields.io/badge/deno-^1.4.0-green.svg?style=flat-square&logo=deno)](https://deno.land)
 
 [<img src="./newsman-on-vercel-deno.png">](https://github.com/yoshixmk/newsman)
 
 Deliver interesting news for you.
-
-`TBD`: This project is currently in the planning stage.
 
 ## Usage
 
@@ -20,7 +19,7 @@ About Deno serverless functions, get started by [vercel-deno](https://github.com
 2. Clone this repository
 3. vercel login
 4. Prepare api key for News API, [here](https://newsapi.org/)
-5. API_KEY=XXX vercel dev
+5. `API_KEY=XXX GAS_SCRIPT_ID=XXX vercel dev --local-config=vercel_local.json`
 
 Try it. Execute the files in the `/api` directory:
 ```shell
